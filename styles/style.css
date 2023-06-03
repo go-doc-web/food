@@ -1,1 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
 
+/* font-family: 'Nunito', sans-serif; */
+:root {
+  --black: #000000;
+  --black-light: #333;
+  --white: #ffffff;
+  --gold: #ffd700;
+  --goldenrod: #daa520;
+
+  --icon-color: var(--goldenrod);
+  --bg-primery: #333;
+}
+/* Common */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* @keyframes shadowIcons {
+  0% {
+    text-shadow: 0.2rem 0.2rem 0.2rem var(--gold);
+  }
+  25% {
+    text-shadow: 0.2rem 0.2rem 1rem var(--gold);
+  }
+  50% {
+    text-shadow: 0.2rem 0.2rem 1.5rem var(--gold);
+  }
+
+  75% {
+    text-shadow: 0.2rem 0.2rem 1rem var(--gold);
+  }
+
+  100% {
+    text-shadow: 0.2rem 0.2rem 0.2rem var(--gold);
+  }
+} */
+
+/* Section 1 */
+
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.section-heading {
+  font-size: 12rem;
+  font-weight: 900;
+  color: var(--white);
+  text-transform: capitalize;
+  letter-spacing: 0.3rem;
+
+  text-shadow: 0.3rem 0.3rem 0.3rem var(--goldenrod);
+}
+
+.section-1-icons i {
+  font-size: 35rem;
+  color: var(--icon-color);
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+
+  text-shadow: 0.2rem 0.2rem -3rem var(--gold);
+  transition: transform 300ms linear;
+  /* animation-name: shadowIcons;
+  animation-duration: 3000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; */
+}
+
+.section-1-icons i.active {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms 300ms linear;
+}
