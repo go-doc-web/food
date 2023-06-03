@@ -10,6 +10,7 @@
 
   --icon-color: var(--goldenrod);
   --bg-primery: #333;
+  --bg-secondary: #222;
 }
 /* Common */
 * {
@@ -31,9 +32,25 @@ button {
   outline: none;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
 }
+
+.section-heading {
+  font-size: 12rem;
+  font-weight: 900;
+  color: var(--white);
+  text-transform: capitalize;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  text-shadow: 0.3rem 0.3rem 0.3rem var(--black);
+}
+
+/* End of Common */
 
 /* @keyframes shadowIcons {
   0% {
@@ -60,22 +77,12 @@ body {
 .section-1 {
   width: 100%;
   height: 100vh;
-  background-color: var(--black);
+  background-color: var(--bg-primery);
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-}
-
-.section-heading {
-  font-size: 12rem;
-  font-weight: 900;
-  color: var(--white);
-  text-transform: capitalize;
-  letter-spacing: 0.3rem;
-
-  text-shadow: 0.3rem 0.3rem 0.3rem var(--goldenrod);
 }
 
 .section-1-icons i {
@@ -84,7 +91,7 @@ body {
   position: absolute;
   transform: translate(-50%, -50%) scale(0);
 
-  text-shadow: 0.2rem 0.2rem -3rem var(--gold);
+  text-shadow: 0.2rem 0.2rem 0.3rem var(--black);
   transition: transform 300ms linear;
   /* animation-name: shadowIcons;
   animation-duration: 3000ms;
@@ -96,3 +103,105 @@ body {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 300ms 300ms linear;
 }
+
+/* Section 2 */
+
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+
+  padding: 10rem 0;
+}
+
+.section-wrapper {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15rem;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 30rem;
+  background-color: var(--gold);
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1rem 1rem 1rem var(--black);
+  position: relative;
+  transform: rotateY(20deg) skewX(-2deg);
+  transition: transform 500ms linear, box-shadow 500ms linear;
+}
+
+.card:hover,
+.card:focus {
+  transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
+  box-shadow: 1rem 1rem 1rem var(--black);
+}
+
+.card:before {
+  content: '';
+  height: 100%;
+  width: 1rem;
+  background-color: var(--goldenrod);
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  transform: skewY(45deg);
+  transform-origin: right;
+  box-shadow: -0.2rem -0.2rem -0.2rem var(--black);
+}
+
+.card:after {
+  content: '';
+  height: 1rem;
+  width: 100%;
+  background-color: var(--goldenrod);
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  transform: skewX(45deg);
+  transform-origin: bottom;
+  box-shadow: -0.2rem -0.2rem -0.2rem var(--black);
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-title {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: #111;
+  margin: 2rem 0;
+  text-shadow: 0.15rem 0.15rem 0.15rem #000;
+}
+
+.card-btn {
+  width: 70%;
+  background-color: #111;
+  color: #888;
+  border-radius: 5rem;
+  font-family: inherit;
+  padding: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: none;
+  box-shadow: -2rem -2rem -2rem var(--black);
+}
+
+/* End of Section 2 */
